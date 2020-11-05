@@ -703,14 +703,14 @@ def winning_crown_ada_moving():
 
 def music_intro():
     pg.mixer.init()
-    pg.mixer.music.load("intro_song_1.mp3")
+    pg.mixer.music.load("music/intro_song_1.mp3")
     pg.mixer.music.play(-1)
     pg.mixer.music.set_volume(0.1)
 
 
 def music_battle():
     pg.mixer.init()
-    pg.mixer.music.load("battle_time_1.mp3")
+    pg.mixer.music.load("music/battle_time_1.mp3")
     pg.mixer.music.play(-1)
     pg.mixer.music.set_volume(0.1)
 
@@ -729,19 +729,19 @@ def music_lose_game_melody():
 
 
 def sound_ambient_hover_over_attack_btn():
-    sound = mixer.Sound("ambient_attack_c_short.mp3")
+    sound = mixer.Sound("music/ambient_attack_c_short.mp3")
     sound.play(1)
     sound.set_volume(0.1)
 
 
 def sound_ambient_hover_over_special_attack_btn():
-    sound = mixer.Sound("ambient_special_attack_c1_short.mp3")
+    sound = mixer.Sound("music/ambient_special_attack_c1_short.mp3")
     sound.play()
     sound.set_volume(0.1)
 
 
 def sound_ambient_hover_quizz_btn():
-    sound = mixer.Sound("ambient_quizz_c2_short.mp3")
+    sound = mixer.Sound("music/ambient_quizz_c2_short.mp3")
     sound.play()
     sound.set_volume(0.1)
 
