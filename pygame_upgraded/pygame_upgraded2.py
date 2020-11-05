@@ -52,15 +52,15 @@ crashed = False
 
 base_font = pg.font.SysFont("roboto mono", 30, True)
 
-bg = pg.image.load("Background_forest.jpg").convert()
+bg = pg.image.load("pics/Background_forest.jpg").convert()
 background = pg.transform.scale(bg, (800, 600))
 screen.blit(background, (0, 0))
 
 # logo = pg.image.load("LOGO2.PNG")
 # logo = pg.transform.scale(logo, (300, 185))
 
-shield = pg.image.load("shield_white.png")
-sword = pg.image.load("sword_resized.png")
+shield = pg.image.load("pics/shield_white.png")
+sword = pg.image.load("pics/sword_resized.png")
 
 
 
@@ -125,7 +125,7 @@ def text_input(input_rect, user_text):
 
 
 def vs_logo():
-    vs_sign = pg.image.load("VS.PNG")
+    vs_sign = pg.image.load("pics/VS.PNG")
     vs_sign = pg.transform.scale(vs_sign, (200, 150))
     screen.blit(vs_sign, (300, 225))
 
@@ -222,7 +222,7 @@ def block_button(mouse):
 
 
 def chat_bubble_left():
-    left = pg.image.load('Chat_bubble_left.png').convert_alpha()
+    left = pg.image.load('pics/Chat_bubble_left.png').convert_alpha()
     left_small = pg.transform.scale(left, (300, 170))
     screen.blit(left_small, (250, 50))
     mood_score = calc_mood_score(gunnar.mood, "Göteborg", live=False)
@@ -230,7 +230,7 @@ def chat_bubble_left():
 
 
 def chat_bubble_right():
-    right = pg.image.load('Chat_bubble_right.png').convert_alpha()
+    right = pg.image.load('pics/Chat_bubble_right.png').convert_alpha()
     right_small = pg.transform.scale(right, (300, 170))
     screen.blit(right_small, (260, 350))
     mood_score = calc_mood_score(ada.mood, "Stockholm", live=False)
