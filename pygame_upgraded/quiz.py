@@ -20,7 +20,7 @@ class QuizStartScreen:
 
         global return_screen
         return_screen = return_screen_
-        music("music/quizz_music.mp3")
+        music("music//quizz_music.mp3")
         background_image_raw = pygame.image.load("pics/Background_forest.jpg").convert()
         self.background_image = pygame.transform.scale(background_image_raw, screen_size)
         self.title = TextBox(rel_pos=(0.5, 0.1), font_name=FONT_ROBOTO,
