@@ -23,7 +23,7 @@ vs_sign = pg.transform.scale(vs_sign, (200, 150))
 
 
 start_screen = None
-
+#asdasdasdasd
 
 def text_speech(screen, font: str, size: int, text: str, color, x, y, bold: bool):
     font = pg.font.Font(font, size)
