@@ -36,3 +36,6 @@ start_background = pg.transform.scale(start_background, (width, height))
 
 instructions_frame = pg.image.load("pics/Frame_background.PNG")
 instructions_frame = pg.transform.scale(instructions_frame, (650, 450))
+
+robofont = "fonts//RobotoSlab-Black.ttf"
+robofont_medium = "fonts//RobotoSlab-Medium.ttf"
