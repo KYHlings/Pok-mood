@@ -17,7 +17,7 @@ width = 800
 height = 600
 screen = pg.display.set_mode((width, height))
 
-bg = pg.image.load("Background_forest.jpg")
+bg = pg.image.load("pics/Background_forest.jpg")
 background = pg.transform.scale(bg, (800, 600))
 
 vs_sign = pg.image.load("VS.PNG")
@@ -29,10 +29,10 @@ background_win = pg.transform.scale(background_win, (800, 600))
 logo = pg.image.load("LOGO.PNG")
 logo = pg.transform.scale(logo, (360, 222))
 
-start_background = pg.image.load("background_start.png")
+start_background = pg.image.load("pics/background_start.png")
 start_background = pg.transform.scale(start_background, (800, 600))
 
-instructions_frame = pg.image.load("Frame_background.PNG")
+instructions_frame = pg.image.load("pics/Frame_background.PNG")
 instructions_frame = pg.transform.scale(instructions_frame, (650, 450))
 
 start_screen = None
@@ -62,8 +62,8 @@ class Poketer:
         self.health += health_score
         
 
-gunnar = Poketer("Glada Gunnar", 'happy', 'yellow', 50, 50, 45, catchword="#YOLO", img_name="Green_monster_resized.png")
-ada = Poketer("Aggressiva Ada", 'angry', 'red', 50, 50, 45, catchword="#FTW", img_name="Pink_dragon_01.png")
+gunnar = Poketer("Glada Gunnar", 'happy', 'yellow', 50, 50, 45, catchword="#YOLO", img_name="pics//Green_monster_resized.png")
+ada = Poketer("Aggressiva Ada", 'angry', 'red', 50, 50, 45, catchword="#FTW", img_name="pics//Pink_dragon_01.png")
 
 
 def attack_function(attacker, defender):
@@ -425,7 +425,7 @@ class WinnerScreenGunnar:
         gunnar_bigger = pg.transform.scale(gunnar.image, (350, 350))
         screen.blit(gunnar_bigger, (220, 235 + y_off))
         winning_crown_hasse_moving()
-        pink_dragon_sad = pg.image.load("Pink_dragon_05.png")
+        pink_dragon_sad = pg.image.load("pics/Pink_dragon_05.png")
         pink_dragon_sad = pg.transform.scale(pink_dragon_sad, (204, 235))
         screen.blit(pink_dragon_sad, (25, 340))
         screen.blit(logo, (213, -55))
@@ -460,7 +460,7 @@ class WinnerScreenAda:
     def render(self, screen):
         screen.fill(WHITE)
         screen.blit(background_win, (0, 0))
-        ada_win_pic = pg.image.load("Pink_dragon_08.png")
+        ada_win_pic = pg.image.load("pics/Pink_dragon_08.png")
         ada_win_pic = pg.transform.scale(ada_win_pic, (350, 350))
         screen.blit(ada_win_pic, (205, 285))
         winning_crown_ada_moving()
@@ -526,14 +526,14 @@ def aggressive_ada(x, y, a, b):
 
 
 def left_chat_bubble(mood_score):
-    left_bubble = pg.image.load("Chat_bubble_left.png")
+    left_bubble = pg.image.load("pics/Chat_bubble_left.png")
     left_bubble = pg.transform.scale(left_bubble, (300, 170))
     screen.blit(left_bubble, (250, 50))
     text_speech(screen, "RobotoSlab-Medium.ttf", 15, f"Moodscore: {mood_score}", BLACK, 390, 135, True)
 
 
 def right_chat_bubble(mood_score):
-    right_bubble = pg.image.load("Chat_bubble_right.png")
+    right_bubble = pg.image.load("pics/Chat_bubble_right.png")
     right_bubble = pg.transform.scale(right_bubble, (300, 170))
     screen.blit(right_bubble, (260, 350))
     text_speech(screen, "RobotoSlab-Medium.ttf", 15, f"Moodscore: {mood_score}", BLACK, 370, 435, True)
