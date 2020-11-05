@@ -433,7 +433,7 @@ class WinnerScreenGunnar:
         tear_drop = pg.image.load("pics//tear-png-20.png")
         tear_drop = pg.transform.scale(tear_drop, (25, 25))
         screen.blit(tear_drop, (120, 410))
-        text_speech(screen, "fonts//oSlab-Medium.ttf", 30, "Congratulations,", YELLOW_LIGHT, 389, 150, True)
+        text_speech(screen, "fonts//RobotoSlab-Medium.ttf", 30, "Congratulations,", YELLOW_LIGHT, 389, 150, True)
         text_speech(screen, "fonts//RobotoSlab-Medium.ttf", 30, f"{gunnar.name} won!", YELLOW_LIGHT, 388, 200, True)
         quit_button()
 
