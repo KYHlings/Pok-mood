@@ -16,20 +16,23 @@ LIGHT_BLUE_UNSELECTED = (70, 70, 225)
 LIGHT_GREEN_SELECTED = (120, 255, 120)
 LIGHT_GREEN_UNSELECTED = (70, 225, 70)
 
+width = 800
+height = 600
+
 bg = pg.image.load("pics/Background_forest.jpg")
-background = pg.transform.scale(bg, (800, 600))
+background = pg.transform.scale(bg, (width, height))
 
 vs_sign = pg.image.load("pics/VS.PNG")
 vs_sign = pg.transform.scale(vs_sign, (200, 150))
 
 background_win = pg.image.load("pics/winning_pic.jpg")
-background_win = pg.transform.scale(background_win, (800, 600))
+background_win = pg.transform.scale(background_win, (width, height))
 
 logo = pg.image.load("pics/LOGO.PNG")
 logo = pg.transform.scale(logo, (360, 222))
 
 start_background = pg.image.load("pics/background_start.png")
-start_background = pg.transform.scale(start_background, (800, 600))
+start_background = pg.transform.scale(start_background, (width, height))
 
 instructions_frame = pg.image.load("pics/Frame_background.PNG")
 instructions_frame = pg.transform.scale(instructions_frame, (650, 450))
