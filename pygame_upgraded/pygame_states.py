@@ -1,20 +1,18 @@
 from random import randint
 import sys
-from pygame import mixer
 
 from pygame_upgraded.constants import *
 from pygame_upgraded.mood_score import calc_mood_score
 from pygame_upgraded.quiz import QuizStartScreen
 from pygame_upgraded.quiz_api import quiz_categories
-from pygame_upgraded.common import TextBox, periodic_movement
+from pygame_upgraded.common import *
 from pygame_upgraded.TextToPygame import start_game
 
 #print("Lets use your new stats, press [Enter] to ge in to the World of Poketeers")
 from pygame_upgraded.constants import background, vs_sign
 
 pg.init()
-width = 800
-height = 600
+
 screen = pg.display.set_mode((width, height))
 
 start_screen = None
@@ -201,7 +199,7 @@ class BattleScreen:
             if block_button_rect.collidepoint((mx, my)):
                 return SpecialAttackScreen("user")
             if quiz_button_rect.collidepoint((mx, my)):
-                common.next_screen = QuizStartScreen(5, quiz_categories, self, gunnar)
+                next_screen = QuizStartScreen(5, quiz_categories, self, gunnar)
         return self
 
     def handle_timer(self):
@@ -480,11 +478,6 @@ def mainloop(screen):
         elif ev.type == pg.QUIT:
             break
 
-        if common.next_screen is not None:
-            #print("changing frames to", type(common.next_screen))
-            state = common.next_screen
-            common.next_screen = None
-
         state = state.handle_timer()
         state.render(screen)
 
@@ -730,7 +723,7 @@ def sound_ambient_hover_quizz_btn():
 
 if __name__ == '__main__':
     start_game(False)
-    common.common_init()
+    common_init()
     pg.display.set_caption("PokeMood")
     mainloop(screen)
     pg.quit()
