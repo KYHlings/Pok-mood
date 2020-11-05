@@ -1,15 +1,13 @@
-import pygame as pg
 from random import randint
 import sys
 from pygame import mixer
 
 from pygame_upgraded.constants import *
-from mood_score import calc_mood_score
-from quiz import QuizStartScreen
-from quiz_api import quiz_categories
-import common
-from common import TextBox, periodic_movement
-from TextToPygame import start_game
+from pygame_upgraded.mood_score import calc_mood_score
+from pygame_upgraded.quiz import QuizStartScreen
+from pygame_upgraded.quiz_api import quiz_categories
+from pygame_upgraded.common import TextBox, periodic_movement
+from pygame_upgraded.TextToPygame import start_game
 
 #print("Lets use your new stats, press [Enter] to ge in to the World of Poketeers")
 from pygame_upgraded.constants import background, vs_sign
@@ -18,9 +16,6 @@ pg.init()
 width = 800
 height = 600
 screen = pg.display.set_mode((width, height))
-
-vs_sign = pg.transform.scale(vs_sign, (200, 150))
-
 
 start_screen = None
 #asdasdasdasd
