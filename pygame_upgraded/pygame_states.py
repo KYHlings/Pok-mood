@@ -716,14 +716,14 @@ def music_battle():
 
 def music_win_game_melody():
     pg.mixer.init()
-    pg.mixer.music.load("vinnar_låt_utkast.mp3")
+    pg.mixer.music.load("music/vinnar_låt_utkast.mp3")
     pg.mixer.music.play(-1)
     pg.mixer.music.set_volume(0.3)
 
 
 def music_lose_game_melody():
     pg.mixer.init()
-    pg.mixer.music.load("lose_game_melody.mp3")
+    pg.mixer.music.load("music/lose_game_melody.mp3")
     pg.mixer.music.play(-1)
     pg.mixer.music.set_volume(0.2)
 
