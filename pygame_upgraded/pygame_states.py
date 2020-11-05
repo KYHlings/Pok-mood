@@ -224,6 +224,8 @@ class BattleScreen:
                 common.next_screen = QuizStartScreen(5, quiz_categories, self, gunnar)
         return self
 
+
+
     def handle_timer(self):
         return self
 
