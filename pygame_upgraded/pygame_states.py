@@ -3,7 +3,7 @@ from random import randint
 import sys
 from pygame import mixer
 
-from Pygame.constants import *
+from pygame_upgraded.constants import *
 from mood_score import calc_mood_score
 from quiz import QuizStartScreen
 from quiz_api import quiz_categories
@@ -12,28 +12,15 @@ from common import TextBox, periodic_movement
 from TextToPygame import start_game
 
 #print("Lets use your new stats, press [Enter] to ge in to the World of Poketeers")
+from pygame_upgraded.constants import background, vs_sign
+
 pg.init()
 width = 800
 height = 600
 screen = pg.display.set_mode((width, height))
 
-bg = pg.image.load("pics/Background_forest.jpg")
-background = pg.transform.scale(bg, (800, 600))
-
-vs_sign = pg.image.load("VS.PNG")
 vs_sign = pg.transform.scale(vs_sign, (200, 150))
 
-background_win = pg.image.load("winning_pic.jpg")
-background_win = pg.transform.scale(background_win, (800, 600))
-
-logo = pg.image.load("LOGO.PNG")
-logo = pg.transform.scale(logo, (360, 222))
-
-start_background = pg.image.load("pics/background_start.png")
-start_background = pg.transform.scale(start_background, (800, 600))
-
-instructions_frame = pg.image.load("pics/Frame_background.PNG")
-instructions_frame = pg.transform.scale(instructions_frame, (650, 450))
 
 start_screen = None
 
@@ -429,7 +416,7 @@ class WinnerScreenGunnar:
         pink_dragon_sad = pg.transform.scale(pink_dragon_sad, (204, 235))
         screen.blit(pink_dragon_sad, (25, 340))
         screen.blit(logo, (213, -55))
-        tear_drop = pg.image.load("tear-png-20.png")
+        tear_drop = pg.image.load("pics/tear-png-20.png")
         tear_drop = pg.transform.scale(tear_drop, (25, 25))
         screen.blit(tear_drop, (120, 410))
         text_speech(screen, "RobotoSlab-Medium.ttf", 30, "Congratulations,", YELLOW_LIGHT, 389, 150, True)
@@ -466,7 +453,7 @@ class WinnerScreenAda:
         winning_crown_ada_moving()
         gunnar_lose = pg.transform.scale(gunnar.image, (200, 200))
         screen.blit(gunnar_lose, (25, 355))
-        tear_drop = pg.image.load("tear-png-20.png")
+        tear_drop = pg.image.load("pics/tear-png-20.png")
         tear_drop = pg.transform.scale(tear_drop, (25, 25))
         screen.blit(tear_drop, (90, 430))
         screen.blit(logo, (215, -55))
@@ -668,7 +655,7 @@ def quit_button_start():
 
 
 def sword(turn):
-    sword = pg.image.load("sword_resized.png")
+    sword = pg.image.load("pics/sword_resized.png")
     x_off, y_off = periodic_movement(1, 5)
     if turn == "user":
         rotate_image = pg.transform.rotozoom(sword, 0 + x_off, 1)
@@ -678,7 +665,7 @@ def sword(turn):
     screen.blit(rotate_image, new_rect)
 
 def crossed_sword():
-    double_sword = pg.image.load("Sword_crossed_01.PNG")
+    double_sword = pg.image.load("pics/Sword_crossed_01.PNG")
     double_sword = pg.transform.smoothscale(double_sword, (230, 230))
 
     x_off, y_off = periodic_movement(1, 7)
@@ -689,13 +676,13 @@ def crossed_sword():
     screen.blit(shield, blit_rect)
 
 def winning_crown_hasse_moving():
-    winning_crown = pg.image.load("crown.png")
+    winning_crown = pg.image.load("pics/crown.png")
     winning_crown = pg.transform.scale(winning_crown, (170, 140))
     x_off, y_off = periodic_movement(1, 5)
     screen.blit(winning_crown, (270, 180 + y_off))
 
 def winning_crown_ada_moving():
-    winning_crown = pg.image.load("crown.png")
+    winning_crown = pg.image.load("pics/crown.png")
     winning_crown = pg.transform.scale(winning_crown, (151, 124))
     x_off, y_off = periodic_movement(1, 5)
     screen.blit(winning_crown, (340, 245 + y_off))

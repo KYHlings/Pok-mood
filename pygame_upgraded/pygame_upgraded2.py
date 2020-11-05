@@ -59,8 +59,8 @@ screen.blit(background, (0, 0))
 # logo = pg.image.load("LOGO2.PNG")
 # logo = pg.transform.scale(logo, (300, 185))
 
-shield = pg.image.load("shield_white.png")
-sword = pg.image.load("sword_resized.png")
+shield = pg.image.load("pics/shield_white.png")
+sword = pg.image.load("pics/sword_resized.png")
 
 
 
@@ -125,7 +125,7 @@ def text_input(input_rect, user_text):
 
 
 def vs_logo():
-    vs_sign = pg.image.load("VS.PNG")
+    vs_sign = pg.image.load("pics/VS.PNG")
     vs_sign = pg.transform.scale(vs_sign, (200, 150))
     screen.blit(vs_sign, (300, 225))
 
